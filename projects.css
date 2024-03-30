@@ -1,0 +1,337 @@
+
+* {
+    font-family: Montserrat;
+    
+    padding:0;
+    color: white;
+    
+  }
+  html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  body {
+    background: linear-gradient(-45deg, #d6532b, #261594, #3a877f, #09042c);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      margin:2rem;
+      
+
+   
+      
+  }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+    }
+
+    .navbar {
+        margin: auto;
+        display: flex;
+        
+        justify-content: space-between;
+        padding:2rem;
+        padding-bottom: 0;
+        
+        
+        flex-direction: row;
+        
+         
+      }
+      
+      .navbar ul li {
+       
+        padding-top:2rem;
+        
+        list-style: none;
+        display: inline-block;
+        margin: 0 3rem;
+       
+        position: relative;
+        
+      }
+      
+      .navbar ul li a {
+        text-decoration: none;
+        color:white;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+      }
+      
+      .current {
+        font-weight: bold;
+        color: maroon;
+      }
+      
+      .navbar ul li :after {
+        
+        content: "";
+        height: 3px;
+        width: 0;
+        background: #ee9118d7;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+      }
+      
+      .navbar ul li :hover:after {
+        width: 100%;
+      
+      }
+
+      .landingpage .hamburgermenu {
+        color: white;
+        font-size: 4rem;
+        display: none;
+      }
+      
+      .landingpage .close {
+        color: white;
+        font-size: 4rem;
+      }
+      
+      .landingpage .sidebar{
+        display: none;
+      }
+      
+
+      /* main section*/
+
+      .main{
+        margin:0 8rem;
+        letter-spacing: 0.2rem;
+       
+      }
+
+      
+
+      .main hr{
+        border: 1px dashed rgb(56, 141, 214);
+        
+      }
+
+      .main p{
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+        line-height: 2.5rem;
+      }
+
+      .video_frame{
+        position:relative;
+        overflow:hidden;
+        
+        width: 600px;
+        height:350px;
+        margin:0 auto;
+      }
+
+
+      .video_frame iframe{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .button{
+        
+        background-color: rgb(178, 137, 23);
+    border-radius: 12px;
+        border: 0;
+        border-radius: 50px;;
+        transition: 0.5s;
+  
+  min-width: 15rem;
+  padding: 1.5rem 2.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.25rem;
+ 
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+ 
+  color: white;
+      }
+
+  .button:hover{
+    background-color: rgb(118, 34, 115);
+  }
+
+  .button2{
+    border: 1px solid #b7b7b7;
+    padding: 10px 20px;
+    background-color: rgba(255, 192, 203, 0.153);
+    border-radius: 3px;
+    margin:15px;
+  }
+
+  
+  .screenshot{
+    
+    width:50%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+
+
+      /* Responsive Design*/
+@media (max-width: 1200px) {
+    html {
+      font-size: 62.5%;
+    }
+  
+   .landingpage .sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top:0;
+    right:-100%;
+    width: 30rem;
+    height:100vh;
+    padding: 2rem;
+    
+    
+    background-color:rgba(255, 255, 255, 0.158);
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    
+    overflow: hidden;
+    transition: height 1s;
+    z-index: 999;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  
+    transition: 0.75s ease-out;
+  
+    }
+  
+  
+    .sidebar li{
+     
+    list-style: none;
+    padding: 2rem;
+    }
+
+
+    .sidebar li a {
+      text-decoration: none;
+      font-size: 2rem;
+      color:white;
+    
+    }
+  
+    .landingpage .hamburgermenu {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: 5rem;
+      right: 6rem;
+      
+      font-size: 3.5rem;
+    
+    }
+  
+    .sidebar .close {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: 5rem;
+      right: 6rem;
+      font-size: 2.5rem;
+    
+    }
+   
+    .navlinks{
+      display: none;
+    }
+  
+    .logo{
+      max-width: 50rem;
+    }
+    
+    .video_frame{
+      position: relative;
+      width: 400px;
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .video_frame iframe{
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+    }
+
+
+    
+  
+  }
+
+  @media (max-width: 1000px) {
+    html {
+      font-size: 40.5%;
+    }
+
+    .pic1{
+        height:20rem;
+        border-radius: 50%;
+    }
+
+    .landingpage {
+      width: 100%;
+      height:100%;
+      margin: 0;
+      
+    }
+    
+        
+   
+
+      .landingpage .hamburgermenu {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 6rem;
+        right: 6rem;
+        
+        font-size: 4.5rem;
+      
+      }
+
+
+      .video_frame{
+        position: relative;
+        width: 280px;
+        height: 150px;
+        overflow: hidden;
+      }
+  
+      .video_frame iframe{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+      }
+  
+  
+  }
